@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Form</title>
+    <link rel="stylesheet" href="css/payment-form.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="margin-tb">Φόρμα Πληρωμής</h1>
+        <p>Τα υποχρεωτικά πεδία ακολουθούνται από <strong><abbr
+                    title="required">*</abbr></strong>.</p>
+        <form name="payment-form" method="post" action="https://www.test.gr">
+        <div class="personal">
+            <h2 class="margin-tb">Προσωπικά Στοιχεία</h2>
+            <fieldset class="m-bottom">
+                <legend>Title</legend>
+                <div class="title">
+                    <div>
+                        <label for="mr">
+                            <input class="radio" type="radio" name="title" id="mr" value="Mr" checked>
+                            Mr.
+                        </label>
+                    </div>
+                    <div>
+                        <label for="mrs">
+                            <input class="radio" type="radio" name="title" id="mrs" value="Mrs">
+                            Mrs.
+                        </label>
+                    </div>
+                    <div>
+                        <label for="dr">
+                            <input class="radio" type="radio" name="title" id="dr" value="Dr">
+                            Dr.
+                        </label>
+                    </div>
+                </div>
+            </fieldset>
+            <div class="input m-bottom">
+                <label for="name">
+                    <span> Name:</span>
+                    <strong><abbr title="required">*</abbr></strong>
+                </label>
+                <input type="text" class="box" name="name" id="name" required>
+            </div>
+            <div class="input m-bottom">
+                <label for="email">
+                    <span>E-mail:</span>
+                    <strong><abbr title="required">*</abbr></strong>
+                </label>
+                <input class="box" type="email" name="email" id="email" required>
+            </div>
+            <div class="input m-bottom">
+                <label for="password">
+                    <span>Password:</span>
+                    <strong><abbr title="required">*</abbr></strong>
+                </label>
+                <input class="box" type="password" name="password" id="password" minlength="8" required>
+            </div>
+
+        </div>
+        <div class="payment">
+            <h2 class="margin-tb">Πληροφορίες Πληρωμής</h2>
+            <div class="input m-bottom">
+                <label for="card">
+                    <span>Card Type:</span>
+                </label>
+                <select name="card-type" class="box text-center" id="card">
+                    <option value="visa">Visa</option>
+                    <option value="master-card">Master Card</option>
+                    <option value="american-express">American Express</option>
+                </select>
+            </div>
+            <div class="input m-bottom">
+                <label for="number">
+                    <span>Card Number:</span>
+                    <strong><abbr title="required">*</abbr></strong>
+                </label>
+                <input class="box" type="text" id="number" pattern="[0-9]{16}" required>
+            </div>
+            <div class="input m-bottom">
+                <label for="expiration">
+                    <span>Exp. Date:</span>
+                    <strong><abbr title="required">*</abbr></strong>
+                </label>
+                <input class="box text-center" type="date" id="expiration" required>
+            </div>
+        </div>
+        <div class="margin-tb">
+            <input type="submit" value="Προχωρήστε στην Πληρωμή" class="button" id="button">
+        </div>
+        </form>
+    </div>
+</body>
+</html>
